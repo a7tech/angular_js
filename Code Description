@@ -1,0 +1,14 @@
+Code Description : 
+
+The code contain node js, angularjs , mysql for back-end.
+
+There are some html files which is for front end display the content and response.
+First folder which contain the angular js code, in this folder you can get controller of angular js. In this folder I just past 2 controller , in user controller file you can check the code of controller.
+
+For all controller I am using the services.
+
+I also used some directives of angularjs , you can check it under directives folder.
+
+Under the config folder there is some code example of node js.
+
+for node js we are using express framework of node js and as required I also used other module too of node.
