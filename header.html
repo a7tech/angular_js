@@ -1,0 +1,47 @@
+
+<div data-ng-controller="HeaderController">
+    <div class="row">
+        <div class="column">
+            <div class="logo">
+                <a href="http://www.taxplancanada.ca">
+                    <img src="/img/Taxplan_Logo_Header.jpg" width="700" height="90" alt="logo"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row collapse">
+        <div class="column">
+            <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+                    <li class="name">
+                    </li>
+                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                    <li class="toggle-topbar"><a ng-href="#">Menu <i class="fa fa fa-bars"></i></a></li>
+                </ul>
+                <section class="top-bar-section">
+                    <!-- Right Nav Section -->
+                    <ul class="right" data-ng-show="isAuthorized([userRoles.admin, userRoles.customer])">
+                        <li><a ng-href="#!/users/accounts/{{currentUser.accounts[0]}}"><i class="fa fa-home"></i>&nbsp;My TAXreturn Dashboard</a></li>
+                        <li class="has-dropdown">
+                            <a>
+                                <i class="fa fa-user"></i>&nbsp;{{currentUser.name}} <span ng-if="isAuthorized(userRoles.admin)"><strong>(ADMIN)</strong></span><b class="caret"></b>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="/#!/users/{{currentUser._id}}"><i class="fa fa-cog"></i>&nbsp;My Settings</a></li>
+                                <li><a href="/#!/" ng-show="isAuthorized(userRoles.admin)"><i class="fa fa-users"></i>&nbsp;Accounts</a></li>
+                                <li><a ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;Signout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    </div>
+    <div ng-show="alert" data-alert class="alert-box fixed contain-to-grid {{alert.type}} animate-show" style="bottom: 0; top: auto; margin-bottom: 0;">
+        {{alert.message}}
+        <a ng-href="" class="right" style="color: white;" ng-click="close()"><i class="fa fa-times"></i></a>
+    </div>
+</div>
+<div ng-show="active" id="loader-backdrop" spinner>
+    <span us-spinner="opts"></span>
+</div>

@@ -1,0 +1,20 @@
+<ng-form name="form">
+    <div class="row">
+        <div class="column medium-6 push-3">
+            <p>Please enter your email address and we will send you a link that you can use to reset your password.</p>
+            <label>
+                Email
+                <input type="text" name="email" placeholder="Email" ng-model="user.email"/>
+            </label>
+            <button ng-click="send()" class="radius tiny right">Send</button>
+            <div class="clearfix"></div>
+            <div class="text-center">
+                <p>
+                    Don't have an account? <a class="show-login" ng-href="#!/register">Sign up here &raquo</a>
+                    <br/>
+                    Already have an account? <a class="show-login" ng-href="#!/login">Sign in here &raquo</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</ng-form>

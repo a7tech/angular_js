@@ -1,0 +1,97 @@
+<script type="text/javascript" src="/lib/momentjs/moment.js"></script>
+<script type="text/javascript" src="/lib/underscore/underscore.js"></script>
+<script type="text/javascript" src="/lib/base64/base64.min.js"></script>
+
+<!-- Angular JS -->
+<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="/lib/angular-cookies/angular-cookies.min.js"></script>
+<script type="text/javascript" src="/lib/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="/lib/angular-filter/dist/angular-filter.min.js"></script>
+<script type="text/javascript" src="/lib/es5-shim/es5-sham.min.js"></script>
+<script type="text/javascript" src="/lib/angular-file-upload/angular-file-upload.min.js"></script>
+<script type="text/javascript" src="/lib/angular-ui-tree/dist/angular-ui-tree.js"></script>
+<script type="text/javascript" src="/lib/angular-load/angular-load.min.js"></script>
+<script type="text/javascript" src="/lib/angular-payments/lib/angular-payments.min.js"></script>
+
+<!-- Foundation -->
+<script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.js"></script>
+<script type="text/javascript" src="/lib/foundation/js/foundation.min.js"></script>
+<script type="text/javascript" src="/lib/angular-foundation/mm-foundation.min.js"></script>
+<script type="text/javascript" src="/lib/angular-foundation/mm-foundation-tpls.min.js"></script>
+
+<!-- ngStorage -->
+<script type="text/javascript" src="/lib/ngstorage/ngStorage.min.js"></script>
+
+<!-- Checklist model -->
+<script type="text/javascript" src="/lib/checklist-model/checklist-model.js"></script>
+
+<!-- wysihtml -->
+<script type="text/javascript" src="/lib/wysihtml/parser_rules/advanced.js"></script>
+<script type="text/javascript" src="/lib/wysihtml/dist/wysihtml5x.js"></script>
+<script type="text/javascript" src="/lib/wysihtml/dist/wysihtml5x-toolbar.js"></script>
+
+<!-- spinner -->
+<script src="/lib/spin.js/spin.js"></script>
+<script src="/lib/angular-spinner/angular-spinner.js"></script>
+
+<!-- ng-idle -->
+<script src="/lib/ng-idle/angular-idle.min.js"></script>
+
+<!-- Angular UI -->
+<script type="text/javascript" src="/lib/angular-ui-utils/ui-utils.min.js"></script>
+
+<!-- Modules -->
+<script type="text/javascript" src="/modules/phonenumber/phonenumber.js"></script>
+<script type="text/javascript" src="/modules/sinnumber/sinnumber.js"></script>
+<script type="text/javascript" src="/modules/postalcode/postalcode.js"></script>
+
+
+<!-- Application Init -->
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/directives.js"></script>
+<script type="text/javascript" src="/directives/address/address.js"></script>
+<script type="text/javascript" src="/directives/info/info.js"></script>
+<script type="text/javascript" src="/directives/richtexteditor/richtexteditor.js"></script>
+<script type="text/javascript" src="/directives/safehtml/safehtml.js"></script>
+<script type="text/javascript" src="/directives/spinner/spinner.js"></script>
+<script type="text/javascript" src="/directives/checklist/checklist.js"></script>
+<script type="text/javascript" src="/directives/documents/documents.js"></script>
+<script type="text/javascript" src="/js/filters.js"></script>
+
+<!-- Application Services -->
+<script type="text/javascript" src="/js/services/users.js"></script>
+<script type="text/javascript" src="/js/services/questionnaire.js"></script>
+<script type="text/javascript" src="/js/services/account.js"></script>
+<script type="text/javascript" src="/js/services/product.js"></script>
+<script type="text/javascript" src="/js/services/spinner.interceptor.js"></script>
+<script type="text/javascript" src="/js/services/auth.js"></script>
+<script type="text/javascript" src="/js/services/alertService.js"></script>
+<script type="text/javascript" src="/js/services/modalService.js"></script>
+<script type="text/javascript" src="/js/services/notification.service.js"></script>
+<script type="text/javascript" src="/js/services/services.js"></script>
+
+<!-- Application Controllers -->
+<script type="text/javascript" src="/js/controllers/users.js"></script>
+<script type="text/javascript" src="/js/controllers/questionnaire.js"></script>
+<script type="text/javascript" src="/js/controllers/product.js"></script>
+<script type="text/javascript" src="/js/controllers/account.js"></script>
+<script type="text/javascript" src="/js/controllers/notification.js"></script>
+<script type="text/javascript" src="/js/controllers/index.js"></script>
+<script type="text/javascript" src="/js/controllers/header.js"></script>
+<script type="text/javascript" src="/js/controllers/login.js"></script>
+<script type="text/javascript" src="/js/controllers/reset.js"></script>
+<script type="text/javascript" src="/js/controllers/modal.js"></script>
+<script type="text/javascript" src="/js/init.js"></script>
+
+<script type="text/javascript">
+    $(document).foundation();
+</script>
+
+{% if (process.env.NODE_ENV == 'development') %}
+    <!-- Livereload script rendered -->
+    <script type="text/javascript" src="http://" + req.host + ":35729/livereload.js"></script>
+{% endif %}

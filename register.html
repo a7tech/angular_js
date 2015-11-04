@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="column medium-6 medium-push-3">
+        <h4>CREATE AN ACCOUNT</h4>
+        <form class="signin form-horizontal" name="registrationForm" ng-submit="register(user)" novalidate>
+            <div>
+                <label for="name">Full Name <span style="color: red;">*</span></label>
+                <div>
+                    <input id="name" ng-model="user.name" class="form-control" type="text" name="name" placeholder="Full Name" value="{{user.name}}" />
+                    <small class="error" ng-show="registrationForm.name.$error.msg">{{registrationForm.name.$error.msg}}</small>
+                </div>
+            </div>
+            <div>
+                <label>Phone Number</label>
+                <div>
+                    <input required ng-model="user.phone" class="form-control" type="text" name="phone" placeholder="Phone Number" />
+                    <small class="error" ng-show="registrationForm.phone.$error.msg">{{registrationForm.phone.$error.msg}}</small>
+                </div>
+            </div>
+            <div>
+                <label for="email">Email <span style="color: red;">*</span></label>
+                <div>
+                    <input id="email" ng-model="user.email" class="form-control" type="text" name="email" placeholder="Email" value="{{user.email}}" />
+                    <small class="error" ng-show="registrationForm.email.$error.msg">{{registrationForm.email.$error.msg}}</small>
+                </div>
+            </div>
+            <div>
+                <label for="password">Password <span style="color: red;">*</span></label>
+                <div>
+                    <input id="password" ng-model="user.password" class="form-control" type="password" name="password" placeholder="Password" />
+                    <small class="error" ng-show="registrationForm.password.$error.msg">{{registrationForm.password.$error.msg}}</small>
+                </div>
+            </div>
+            <p class="text-center">
+                <label>
+                    <input type="checkbox" ng-model="agreeToPrivacyAndTermsOfService"/>
+                    I agree to the TAXplan Canada <a ng-href="http://taxplancanada.ca/?page_id=119">Privacy Policy</a> and <a ng-href="http://taxplancanada.ca/?page_id=123">Terms of Service</a>.
+                </label>
+            </p>
+            <div>
+                <div class="text-center">
+                    <button ng-disabled="!agreeToPrivacyAndTermsOfService" class="btn btn-primary radius" type="submit">Sign up</button>
+                    <p>Already have an account? <a class="show-login" ng-href="#!/login">Sign in here &raquo</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<a ng-href="/accounts/{{accountId}}/products/{{productId}}/questionnaires/{{questionnaireId}}/checklist" target="__blank"class="right"><i class="fa fa-file-pdf-o"></i> Print</a>
+<div class="clearfix"></div>
+<p><small>This checklist is a guide based on the answers from your TAXprofile.  If there are other items you feel are relevant please send them as well.  You can upload and send us the items that apply to you by attaching them along with a comment on My Discussion Board.</small></p>
+<div ng-repeat="item in items | visibleChecklistItems">
+    <div class="left">
+        <i style="color: green;" class="fa fa-check-square-o" ng-show="item.completed"></i>
+        <i class="fa fa-square-o" ng-hide="item.completed"></i>
+    </div>
+    <div class="checklist-item">
+        <p>
+            {{item.name}}
+            <br/>
+            <span class="grey">{{item.description}}</span>
+        </p>
+        <div class="document" ng-repeat="document in item.documents">
+            <i class="fa fa-file-o">&nbsp;</i><a ng-href="/accounts/{{accountId}}/products/{{productId}}/questionnaires/{{questionnaireId}}/checklist/{{item._id}}/documents/{{document._id}}">{{document.name}} ({{document.size | bytes:1}})</a>
+        </div>
+    </div>
+</div>
